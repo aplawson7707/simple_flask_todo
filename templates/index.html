@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>A simple TODO app using Flask</title>
+    </head>
+
+    <body>
+        <h2>Create</h2>
+        <form method="POST" action="/">
+            <input type="text" name="text" placeholder="Add a new TODO task">
+            <button type="submit" value="update">Create New</button>
+        </form>
+        <h2>List</h2>
+        {% for note in notes %}
+            <p>
+                <input type="text" name="text" title="{{note.dateAdded}}" value="{{note.text}}">
+            </p>
+        {% endfor %}
+        
+    </body>
+</html>
